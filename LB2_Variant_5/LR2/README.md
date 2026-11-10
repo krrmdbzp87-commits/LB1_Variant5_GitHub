@@ -88,7 +88,7 @@ flowchart TD
 | `readValidRecord(recordNumber, base, absences)` | Зчитує поля й повторює запис у разі помилки діапазону. |
 | `main()` | Керує введенням `N`, потоком записів, статистикою та підсумком. |
 
-У коді є `assert` для чистих функцій `calculateM` та `isSearchMatch`. Ці перевірки не замінюють перевірку користувацького введення.
+У коді є `assert` для чистих функцій `calculateM` та `isSearchMatch`.
 
 ### Ручна траса за контрольними даними варіанта
 
@@ -162,9 +162,6 @@ g++ -std=c++17 -Wall -Wextra -pedantic D1_Debug/01_Buggy/main.cpp -o d1_buggy
 g++ -std=c++17 -Wall -Wextra -pedantic D1_Debug/02_Fixed/main.cpp -o d1_fixed
 ./d1_fixed
 ```
-
-У Visual Studio відкрийте кожну версію як окремий консольний проєкт. Для звіту також потрібно самостійно показати breakpoint, аргументи у Watch та крокування F10/F11.
-
 ## 10. Структура папки
 
 ```text
@@ -181,29 +178,6 @@ LR2/
     └── 02_Fixed/
         └── main.cpp
 ```
-
-Файл `.gitignore` розміщений у корені пакета; якщо репозиторій LR1 уже має власний `.gitignore`, додайте до нього потрібні правила, не видаляючи наявні.
-
-## 11. Рекомендована послідовність Git-комітів
-
-Методичка вимагає продовжити **наявний репозиторій ЛР1**. Не виконуйте `git init` повторно та не перезаписуйте файли ЛР1. Після копіювання папки `LR2` до кореня репозиторію можна створити три окремі коміти:
-
-```bash
-# 1. Основна потокова реалізація та README
-git add .gitignore LR2/src LR2/README.md
-git commit -m "Implement variant 5 streaming statistics"
-
-# 2. Відтворення призначеного дефекту та bug report
-git add LR2/D1_Debug/01_Buggy LR2/D1_Debug/BUG_REPORT_D1.md
-git commit -m "Add D1 reproduction and bug report"
-
-# 3. Виправлення та regression-тести
-git add LR2/D1_Debug/02_Fixed LR2/tests/TEST_CASES.md
-git commit -m "Fix inclusive D1 threshold and add regression tests"
-```
-
-Це приклади команд і повідомлень, а не вже виконані коміти. Посилання на репозиторій і фінальний commit hash додавайте до звіту лише після фактичного налаштування Git та створення комітів.
-
-## 12. Декларація використання ШІ
+## 11. Декларація використання ШІ
 
 Під час підготовки цього GitHub-пакета використовувався ChatGPT для оформлення README та підготовки тестової документації й матеріалів D1. Основну програму та окремі D1-версії було скомпільовано й перевірено локально командним рядком; перевірка Visual Studio debugger.
