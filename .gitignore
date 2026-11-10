@@ -17,3 +17,6 @@ main.exe
 .vscode/
 .idea/
 .DS_Store
+
+# macOS debug symbols
+*.dSYM/

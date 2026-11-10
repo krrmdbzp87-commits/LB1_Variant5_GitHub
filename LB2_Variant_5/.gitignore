@@ -1,0 +1,25 @@
+# Visual Studio
+.vs/
+Debug/
+Release/
+x64/
+x86/
+
+# Build artifacts
+*.exe
+*.obj
+*.pdb
+*.ilk
+*.pch
+*.idb
+*.ipch
+*.suo
+*.user
+
+# CMake / generated build directories
+build/
+out/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
